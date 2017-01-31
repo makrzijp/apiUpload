@@ -1,0 +1,38 @@
+{
+  "name": "twittertop3model",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Author": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "Body": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "Location": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "twittermodel": {
+      "type": "hasOne",
+      "model": "twitterModel",
+      "foreignKey": "twittermodelId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

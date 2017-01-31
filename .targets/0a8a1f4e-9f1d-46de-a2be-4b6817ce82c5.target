@@ -1,0 +1,117 @@
+type: bluemix
+server:
+  displayName: United Kingdom
+  name: eu-gb
+  host: eu.apiconnect.ibmcloud.com
+org:
+  id: 588b85df0cf2bad73c2733ee
+  name: markzijp-test
+  displayName: markzijp (test)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://eu.apiconnect.ibmcloud.com/v1/orgs/588b85df0cf2bad73c2733ee'
+  externalOrgId: fc7d8b98-3c31-471f-8671-8172c70b585a
+  externalInviteOverride: 'https://console.eu-gb.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: fc7d8b98-3c31-471f-8671-8172c70b585a
+  externalNativeOrgId: c372f821-43e6-44e0-8d30-672dda6cd19d
+catalog:
+  id: 588b85e00cf2bad73c2733fa
+  orgId: 588b85df0cf2bad73c2733ee
+  name: Sandbox
+  shortName: sb
+  owner:
+    id: 587de67b0cf28cecba740d08
+    username: markzijp@gmail.com
+    context: apimanager
+    idpId: 58335d5ed20e47053bf50fd0
+    email: markzijp@gmail.com
+    firstName: Mark Zijp
+    lastName: ''
+    status: ACTIVE
+    lastLoginTime: '2017-01-27T17:34:47.268+0000'
+    url: 'https://eu.apiconnect.ibmcloud.com/v1/users/587de67b0cf28cecba740d08'
+  apiCenter: false
+  baseUrl: 'https://api.eu.apiconnect.ibmcloud.com/markzijp-test/sb'
+  portalType: ADVANCED
+  portalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/markzijp-test/sb'
+  customPortalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/markzijp-test/sb'
+  advPortalUrl: 'https://sb-markzijp-test.developer.eu.apiconnect.ibmcloud.com'
+  gatewayType: DataPowerGateway
+  idp: 588b85e00cf2bad73c2733fb
+  idps:
+    - 588b85e00cf2bad73c2733fb
+  availableRoles:
+    - viewer
+    - developer
+  default: false
+  autoDeploy: true
+  gatewayClusterUrl: /gatewayClusters/PRODAPIC_APIMGMT_GATEWAY
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: true
+  spaceEnabled: false
+  spaceIds:
+    - 588b85e00cf2bad73c273403
+  testAppEnabled: true
+  testAppCredentials:
+    clientId: 5d91d47d-ee3b-44ac-a6e8-67bcdfcbcaf8
+    clientSecret: S4iX8nX8tK5oQ2hW2mE7iF1yQ7dR5xI8uH2sK5uC5pN8iN5hF0
+  createdAt: '2017-01-27T17:39:44.755+0000'
+  updatedAt: '2017-01-27T17:56:27.558+0000'
+  createdBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: markzijp@gmail.com
+  url: >-
+    https://eu.apiconnect.ibmcloud.com/v1/orgs/588b85df0cf2bad73c2733ee/environments/588b85e00cf2bad73c2733fa
+  productDeploymentApprovalRequiredStates: []
+  orgName: markzijp-test
+space:
+  none: true
+app:
+  metadata:
+    guid: 5cbee665-3e16-4daf-8615-094347a164a0
+    url: /v2/apps/5cbee665-3e16-4daf-8615-094347a164a0
+    created_at: '2017-01-29T23:42:45Z'
+    updated_at: '2017-01-29T23:43:25Z'
+  entity:
+    name: testappmarkzijp
+    production: false
+    space_guid: fc7d8b98-3c31-471f-8671-8172c70b585a
+    stack_guid: 423dd340-c07e-44c2-b7fb-601c10fd32d3
+    buildpack: null
+    detected_buildpack: 'SDK for Node.js(TM) (ibm-node.js-4.6.2, buildpack-v3.9-20161128-1327)'
+    environment_json: {}
+    memory: 256
+    instances: 1
+    disk_quota: 1024
+    state: STARTED
+    version: 7ff5e25d-b20b-4772-9e48-536096842eaf
+    command: null
+    console: false
+    debug: null
+    staging_task_id: 533ec90ee80747ec9b3a5e1c50de5dbf
+    package_state: STAGED
+    health_check_type: port
+    health_check_timeout: null
+    staging_failed_reason: null
+    staging_failed_description: null
+    diego: true
+    docker_image: null
+    package_updated_at: '2017-01-29T23:42:46Z'
+    detected_start_command: ./vendor/initial_startup.rb
+    enable_ssh: true
+    docker_credentials_json:
+      redacted_message: '[PRIVATE DATA HIDDEN]'
+    ports:
+      - 8080
+    space_url: /v2/spaces/fc7d8b98-3c31-471f-8671-8172c70b585a
+    stack_url: /v2/stacks/423dd340-c07e-44c2-b7fb-601c10fd32d3
+    routes_url: /v2/apps/5cbee665-3e16-4daf-8615-094347a164a0/routes
+    events_url: /v2/apps/5cbee665-3e16-4daf-8615-094347a164a0/events
+    service_bindings_url: /v2/apps/5cbee665-3e16-4daf-8615-094347a164a0/service_bindings
+    route_mappings_url: /v2/apps/5cbee665-3e16-4daf-8615-094347a164a0/route_mappings
+id: 0a8a1f4e-9f1d-46de-a2be-4b6817ce82c5
+target: 1.0.0

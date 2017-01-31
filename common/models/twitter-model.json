@@ -1,0 +1,102 @@
+{
+  "name": "twitterModel",
+  "plural": "search",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Keyword": {
+      "type": "string",
+      "required": false
+    },
+    "Location": {
+      "type": "string",
+      "required": false
+    },
+    "Sentiment": {
+      "type": [
+        "number"
+      ]
+    },
+    "twittermodelId": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "userEmail": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "getTweets": {
+      "isStatic": true,
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "string",
+          "root": false,
+          "description": "data"
+        }
+      ],
+      "description": "",
+      "http": [
+        {
+          "path": "getTweetsEnd",
+          "verb": "get"
+        }
+      ]
+    },
+    "twitterSearch": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "query",
+          "type": "string",
+          "required": false,
+          "description": "search word"
+        },
+        {
+          "arg": "amount",
+          "type": "number",
+          "required": false,
+          "description": "number of tweet"
+        },
+        {
+          "arg": "country",
+          "type": "string",
+          "required": false,
+          "description": "country"
+        },
+        {
+          "arg": "email",
+          "type": "string",
+          "required": false,
+          "description": "user email"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "string",
+          "root": false,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "http": [
+        {
+          "path": "/twittersearch",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}

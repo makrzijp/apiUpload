@@ -1,0 +1,20 @@
+{
+  "twitter-cloudant": {
+    "url": "https://425949d4-3161-4f45-8ced-d7ab0484550a-bluemix:8c8012b6e1e2e0a67b5d7e7ba54da13397edb587fcfc91578539af50de67bc6e@425949d4-3161-4f45-8ced-d7ab0484550a-bluemix.cloudant.com",
+    "database": "twitter",
+    "username": "",
+    "password": "",
+    "name": "twitter-cloudant",
+    "modelIndex": "",
+    "connector": "cloudant"
+  },
+  "twittertop3": {
+    "url": "https://425949d4-3161-4f45-8ced-d7ab0484550a-bluemix:8c8012b6e1e2e0a67b5d7e7ba54da13397edb587fcfc91578539af50de67bc6e@425949d4-3161-4f45-8ced-d7ab0484550a-bluemix.cloudant.com",
+    "database": "twittertop3",
+    "username": "",
+    "password": "",
+    "name": "twittertop3",
+    "modelIndex": "",
+    "connector": "cloudant"
+  }
+}

@@ -1,0 +1,937 @@
+paths:
+  /search:
+    post:
+      tags:
+        - twitterModel
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: twitterModel.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twitterModel'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    put:
+      tags:
+        - twitterModel
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: twitterModel.upsert__put_search
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twitterModel'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    patch:
+      tags:
+        - twitterModel
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: twitterModel.upsert__patch_search
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twitterModel'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    get:
+      tags:
+        - twitterModel
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: twitterModel.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/twitterModel'
+      deprecated: false
+  /search/replaceOrCreate:
+    post:
+      tags:
+        - twitterModel
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: twitterModel.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twitterModel'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+  /search/upsertWithWhere:
+    post:
+      tags:
+        - twitterModel
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: twitterModel.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twitterModel'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+  '/search/{id}/exists':
+    get:
+      tags:
+        - twitterModel
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'twitterModel.exists__get_search_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/search/{id}':
+    head:
+      tags:
+        - twitterModel
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'twitterModel.exists__head_search_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - twitterModel
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: twitterModel.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    delete:
+      tags:
+        - twitterModel
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: twitterModel.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - twitterModel
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'twitterModel.prototype.updateAttributes__put_search_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twitterModel'
+        - name: id
+          in: path
+          description: twitterModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    patch:
+      tags:
+        - twitterModel
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'twitterModel.prototype.updateAttributes__patch_search_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twitterModel'
+        - name: id
+          in: path
+          description: twitterModel id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+  '/search/{id}/replace':
+    post:
+      tags:
+        - twitterModel
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: twitterModel.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twitterModel'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+  /search/findOne:
+    get:
+      tags:
+        - twitterModel
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: twitterModel.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+  /search/update:
+    post:
+      tags:
+        - twitterModel
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: twitterModel.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twitterModel'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /search/count:
+    get:
+      tags:
+        - twitterModel
+      summary: Count instances of the model matched by where from the data source.
+      operationId: twitterModel.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /searchgetTweetsEnd:
+    get:
+      tags:
+        - twitterModel
+      operationId: twitterModel.getTweets
+      parameters: []
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              data:
+                description: data
+                type: string
+      deprecated: false
+  /search/twittersearch:
+    get:
+      tags:
+        - twitterModel
+      operationId: twitterModel.twitterSearch
+      parameters:
+        - name: query
+          in: query
+          description: search word
+          required: false
+          type: string
+        - name: amount
+          in: query
+          description: number of tweet
+          required: false
+          type: number
+          format: double
+        - name: country
+          in: query
+          description: country
+          required: false
+          type: string
+        - name: email
+          in: query
+          description: user email
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              data:
+                type: string
+      deprecated: false
+  '/twittertop3models/{id}/twittermodel':
+    get:
+      tags:
+        - twittertop3model
+      summary: Fetches hasOne relation twittermodel.
+      operationId: twittertop3model.prototype.__get__twittermodel
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: twittertop3model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    post:
+      tags:
+        - twittertop3model
+      summary: Creates a new instance in twittermodel of this model.
+      operationId: twittertop3model.prototype.__create__twittermodel
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/twitterModel'
+        - name: id
+          in: path
+          description: twittertop3model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    put:
+      tags:
+        - twittertop3model
+      summary: Update twittermodel of this model.
+      operationId: twittertop3model.prototype.__update__twittermodel
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/twitterModel'
+        - name: id
+          in: path
+          description: twittertop3model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twitterModel'
+      deprecated: false
+    delete:
+      tags:
+        - twittertop3model
+      summary: Deletes twittermodel of this model.
+      operationId: twittertop3model.prototype.__destroy__twittermodel
+      parameters:
+        - name: id
+          in: path
+          description: twittertop3model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /twittertop3models:
+    post:
+      tags:
+        - twittertop3model
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: twittertop3model.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twittertop3model'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+    put:
+      tags:
+        - twittertop3model
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: twittertop3model.upsert__put_twittertop3models
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twittertop3model'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+    patch:
+      tags:
+        - twittertop3model
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: twittertop3model.upsert__patch_twittertop3models
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twittertop3model'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+    get:
+      tags:
+        - twittertop3model
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: twittertop3model.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/twittertop3model'
+      deprecated: false
+  /twittertop3models/replaceOrCreate:
+    post:
+      tags:
+        - twittertop3model
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: twittertop3model.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twittertop3model'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+  /twittertop3models/upsertWithWhere:
+    post:
+      tags:
+        - twittertop3model
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: twittertop3model.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twittertop3model'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+  '/twittertop3models/{id}/exists':
+    get:
+      tags:
+        - twittertop3model
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'twittertop3model.exists__get_twittertop3models_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/twittertop3models/{id}':
+    head:
+      tags:
+        - twittertop3model
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'twittertop3model.exists__head_twittertop3models_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - twittertop3model
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: twittertop3model.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: Filter defining fields and include
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+    delete:
+      tags:
+        - twittertop3model
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: twittertop3model.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - twittertop3model
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'twittertop3model.prototype.updateAttributes__put_twittertop3models_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twittertop3model'
+        - name: id
+          in: path
+          description: twittertop3model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+    patch:
+      tags:
+        - twittertop3model
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: 'twittertop3model.prototype.updateAttributes__patch_twittertop3models_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twittertop3model'
+        - name: id
+          in: path
+          description: twittertop3model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+  '/twittertop3models/{id}/replace':
+    post:
+      tags:
+        - twittertop3model
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: twittertop3model.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/twittertop3model'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+  /twittertop3models/findOne:
+    get:
+      tags:
+        - twittertop3model
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: twittertop3model.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/twittertop3model'
+      deprecated: false
+  /twittertop3models/update:
+    post:
+      tags:
+        - twittertop3model
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: twittertop3model.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/twittertop3model'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /twittertop3models/count:
+    get:
+      tags:
+        - twittertop3model
+      summary: Count instances of the model matched by where from the data source.
+      operationId: twittertop3model.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  twitterModel:
+    properties:
+      Keyword:
+        type: string
+      Location:
+        type: string
+      Sentiment:
+        type: array
+        items:
+          type: number
+          format: double
+      twittermodelId:
+        type: string
+      userEmail:
+        type: string
+      id:
+        type: string
+    additionalProperties: false
+  x-any:
+    properties: {}
+  twittertop3model:
+    properties:
+      Author:
+        type: array
+        items:
+          type: string
+      Body:
+        type: array
+        items:
+          type: string
+      Location:
+        type: array
+        items:
+          type: string
+      id:
+        type: string
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: remotemethodtest
+  version: 1.0.0
+  title: remoteMethodTest
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions: {}
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'https://apiconnect-de737e98-9797-4e7d-a803-309055a701a6.markzijp-test.apic.eu-gb.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

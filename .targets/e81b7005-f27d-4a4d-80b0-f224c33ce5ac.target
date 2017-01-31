@@ -1,0 +1,77 @@
+type: bluemix
+server:
+  displayName: United Kingdom
+  name: eu-gb
+  host: eu.apiconnect.ibmcloud.com
+org:
+  id: 588b85df0cf2bad73c2733ee
+  name: markzijp-test
+  displayName: markzijp (test)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://eu.apiconnect.ibmcloud.com/v1/orgs/588b85df0cf2bad73c2733ee'
+  externalOrgId: fc7d8b98-3c31-471f-8671-8172c70b585a
+  externalInviteOverride: 'https://console.eu-gb.bluemix.net/apis/catalog/invitation'
+  externalSpaceId: fc7d8b98-3c31-471f-8671-8172c70b585a
+  externalNativeOrgId: c372f821-43e6-44e0-8d30-672dda6cd19d
+catalog:
+  id: 588b85e00cf2bad73c2733fa
+  orgId: 588b85df0cf2bad73c2733ee
+  name: Sandbox
+  shortName: sb
+  owner:
+    id: 587de67b0cf28cecba740d08
+    username: markzijp@gmail.com
+    context: apimanager
+    idpId: 58335d5ed20e47053bf50fd0
+    email: markzijp@gmail.com
+    firstName: Mark Zijp
+    lastName: ''
+    status: ACTIVE
+    lastLoginTime: '2017-01-30T10:10:24.030+0000'
+    url: 'https://eu.apiconnect.ibmcloud.com/v1/users/587de67b0cf28cecba740d08'
+  apiCenter: false
+  baseUrl: 'https://api.eu.apiconnect.ibmcloud.com/markzijp-test/sb'
+  portalType: ADVANCED
+  portalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/markzijp-test/sb'
+  customPortalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/markzijp-test/sb'
+  advPortalUrl: 'https://sb-markzijp-test.developer.eu.apiconnect.ibmcloud.com'
+  gatewayType: DataPowerGateway
+  idp: 588b85e00cf2bad73c2733fb
+  idps:
+    - 588b85e00cf2bad73c2733fb
+  availableRoles:
+    - viewer
+    - developer
+  default: false
+  autoDeploy: true
+  gatewayClusterUrl: /gatewayClusters/PRODAPIC_APIMGMT_GATEWAY
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: true
+  spaceEnabled: false
+  spaceIds:
+    - 588b85e00cf2bad73c273403
+  testAppEnabled: true
+  testAppCredentials:
+    clientId: 5d91d47d-ee3b-44ac-a6e8-67bcdfcbcaf8
+    clientSecret: S4iX8nX8tK5oQ2hW2mE7iF1yQ7dR5xI8uH2sK5uC5pN8iN5hF0
+  createdAt: '2017-01-27T17:39:44.755+0000'
+  updatedAt: '2017-01-27T17:56:27.558+0000'
+  createdBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: markzijp@gmail.com
+  url: >-
+    https://eu.apiconnect.ibmcloud.com/v1/orgs/588b85df0cf2bad73c2733ee/environments/588b85e00cf2bad73c2733fa
+  productDeploymentApprovalRequiredStates: []
+  orgName: markzijp-test
+space:
+  none: true
+app:
+  new: true
+  name: explorertest
+id: e81b7005-f27d-4a4d-80b0-f224c33ce5ac
+target: 1.0.0
