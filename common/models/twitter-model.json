@@ -21,13 +21,15 @@
       ]
     },
     "twittermodelId": {
-      "type": [
-        "string"
-      ],
+      "type": "string",
       "required": false
     },
     "userEmail": {
       "type": "string",
+      "required": false
+    },
+    "Date": {
+      "type": "date",
       "required": false
     }
   },

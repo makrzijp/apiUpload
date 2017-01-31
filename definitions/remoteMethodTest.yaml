@@ -872,6 +872,9 @@ definitions:
         type: string
       userEmail:
         type: string
+      Date:
+        type: string
+        format: date
       id:
         type: string
     additionalProperties: false
