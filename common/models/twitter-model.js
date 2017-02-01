@@ -16,7 +16,6 @@ module.exports = function (Twittermodel) {
             mm = '0' + mm
         }
         today = mm + '/' + dd + '/' + yyyy;
-        
         var http = require('http');
         var q = query;
         var quantity = amount;
@@ -84,16 +83,11 @@ module.exports = function (Twittermodel) {
                 var pp = (p / (ne + p + n)) * 100;
                 var pn = (n / (ne + p + n)) * 100;
                 var returnVals = [];
-                returnVals.push({
-                        Keyword: q
-                        , Location: location
-                        , Sentiment: [pp, pne, pn]
-                    })
-                    //create twitter top 
-                    //Object.getOwnPropertyNames(Twittermodel).forEach(function (item) {
-                    //      console.log(item);
-                    //})
-                    //for (var item of data["tweets"]) {
+                //create twitter top 
+                //Object.getOwnPropertyNames(Twittermodel).forEach(function (item) {
+                //      console.log(item);
+                //})
+                //for (var item of data["tweets"]) {
                 var counterTop = 0;
                 var authors = [];
                 var bodies = [];
@@ -146,6 +140,26 @@ module.exports = function (Twittermodel) {
                         , "Date": today
                     });
                 });
+                returnVals.push({
+                    Keyword: q
+                    , Location: location
+                    , Sentiment: [pp, pne, pn]
+                    , Author: [
+                        authors[0]
+                        , authors[1]
+                        , authors[2]
+                      ]
+                    , Body: [
+                        bodies[0]
+                        , bodies[1]
+                        , bodies[2]
+                      ]
+                    , TLocation: [
+                        tweetlocation[0]
+                        , tweetlocation[1]
+                        , tweetlocation[2]
+                      ]
+                })
                 callback(null, returnVals);
             });
         }
